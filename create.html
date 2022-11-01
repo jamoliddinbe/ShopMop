@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/create.css">
+    <link rel="shortcut icon" href="/images/create.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1>Create your own account</h1>
+                </div>
+                <form class="login-card-form">
+                    <div class="form-item">
+                        <input id="email" type="text" placeholder="Username" required autofocus>
+                    </div>
+                    <div class="form-item">
+                        <input id="password" type="text" placeholder="Password" required>
+                        <span id="toogle" class="fa-solid fa-eye"></span>
+                    </div>
+                    <div class="form-item-other">
+    
+                        <!-- <div class="box">
+                            <div class="minibox">
+                                <p>Male</p>
+                                <input type="radio" name="gender" required>
+                            </div>
+                          <div class="minibox">
+                            <p>Female</p>
+                            <input type="radio" name="gender" >
+                          </div>
+                        </div> -->
+                        <select  id="select">
+                           <option value="Male">Male</option>
+                           <option value="Female">Female</option>
+                        </select>
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberMeCheckbox" required>
+                            <label for="rememberMeCheckbox">I agree with privacy and policy</label>
+                        </div>
+                    </div>
+                    <button id="btn" type="submit">Sign In</button>
+                   <p>Do you already have an account?  <a class="back" href="#">Back to log in</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/create.js"></script>
+</body>
+</html>
