@@ -20,9 +20,9 @@ if (!window.localStorage.getItem('token')) {
     window.location.replace('./login.html')
 }
 
-if(window.close){
-window.localStorage.clear()
-}
+// if(window.close){
+// window.localStorage.clear()
+// }
 
 
 
