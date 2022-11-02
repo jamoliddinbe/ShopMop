@@ -76,6 +76,7 @@ main{
 }
 .headerul{
     display: flex;
+    align-items: center;
 }
 .about{
 margin-right: 50px;
@@ -162,4 +163,14 @@ footer{
     height: 20px;
     background-color: red;
 
+}
+
+.back{
+    margin-right: 50px;
+    border: 1px solid black;
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 90px;
 }

@@ -16,6 +16,17 @@ let searchbtn = document.querySelector('#searchbtn')
 let soni = document.querySelector('.soni')
 
 
+
+
+let back = document.querySelector('.back')
+back.addEventListener('click', ()=>{
+    window.location.replace('./index.html')
+    window.localStorage.clear()
+})
+
+
+
+
 if (!window.localStorage.getItem('token')) {
     window.location.replace('./login.html')
 }
