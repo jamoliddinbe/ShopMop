@@ -32,10 +32,11 @@ async function getToken (user){
         headers:{'Content-type':'application/json'},
         body:JSON.stringify(user)
     })
-    loader.style.display = 'flex'
+   
 
     let response = await res.json()
-    if (response.token && response.token != null ) {
+    loader.style.display = 'flex'
+    if (response.token && response.token != null) {
         window.localStorage.setItem('token', response.token)
         loader.style.display = 'none'
         window.location.replace('/index.html')

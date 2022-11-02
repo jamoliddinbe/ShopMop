@@ -2,6 +2,9 @@ let userEl = document.querySelector('#user')
 let passwordEl = document.querySelector('#password')
 let btn = document.querySelector('#login')
 
+
+
+
 toogle.addEventListener('click', function(){
     if(passwordEl.type === 'password' ){
         passwordEl.setAttribute('type', 'text')
@@ -21,16 +24,14 @@ async function getToken (user){
         body:JSON.stringify(user)
     })
     let response = await res.json()
-    if (response.token && response.token != null ) {
+    console.log(response.token)
+    if (response.token && response.token !== null && response.token !== '' ) {
         window.localStorage.setItem('token', response.token)
         window.location.replace('/mainlogin.html')
-    }else{
-        error.style.display = 'block'
-            }
+    }
 
 }
-btn.addEventListener('click', (e)=>{
-    e.preventDefault()
+btn.addEventListener('click', ()=>{
     const user = {
         username :userEl.value,
         password:passwordEl.value

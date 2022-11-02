@@ -9,58 +9,54 @@
     <link rel="shortcut icon" href="images/lock2.jpeg" type="image/x-icon">
         </head>
         <body>
-           <div class="container">
-           <div class="left_card">
-            <div class="ticket1">Overview</div>
-            <div class="ticket2">Tickets</div>
-            <div class="ticket3">Ideas</div>
-            <div class="ticket4">Contacts</div>
-            <div class="ticket5">Agents</div>
-            <div class="ticket6">Articles</div>
-            <div class="ticket7">Settings</div>
-            <div class="ticket8">Subscription</div>
-           </div>
-           <div class="right_card">
-            <button class="logout">Back to log in</button>
-            <div class="centre">
-                <header class="centre_head">
-                    <h2>All tickets</h2>
-                    <input type="text" id="input">
-                    <div class="buttons">
-                        <button id="sort" class="btn1">Sort</button>
-                        <select id="filter">
-                            <option value="low">LOW</option>
-                            <option value="normal">NORMAL</option>
-                            <option value="high">HIGH</option>
-                        </select>
+<div class="container">
+    <button class="back">Back</button>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="productCode">Product ID</label>
+                        <input type="text" name="productCode" id="productCode">
                     </div>
-                </header>
-                <div class="details">
-                    <hr>
-                    <div class="customers">
-                        <div class="card1">
-                            <div class="div">
-                            <h4>Contact Email not linked</h4>
-                            <span>Updated 1 day ago</span>
-                            </div>
-                        </div>
-                        <div class="card2">
-                            <h4>Tom Cruise</h4>
-                            <span>on 24 05 2019</span>
-                        </div>
-                        <div class="card3">
-                            <h4>May 26, 2019</h4>
-                            <span>6:30</span>
-                        </div>
-                        <span class="high">HIGH</span>
+                    <div>
+                        <label for="product">Product Name</label>
+                        <input type="text" name="product" id="product">
                     </div>
-                </div>
-            </div>
-           </div>
-        
-        </div>
-        
-    </div>
+                    <div>
+                        <label for="qty">Quantity</label>
+                        <input type="number" name="qty" id="qty">
+                    </div>
+                    <div>
+                        <label for="perPrice">Price</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Product Code</th>
+                                <th>Product Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+</div>
     <script src="./mainlogin.js"></script>
 </body>
 </html>
